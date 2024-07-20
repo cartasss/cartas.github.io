@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://img.freepik.com/fotos-premium/pintura-noche-estrellada-cielo-estrellado-encima_561641-2449.jpg'); /* Cambia esta URL por la de tu imagen de fondo */
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            cursor: pointer;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 160px;
+            border-radius: 50px 50px 0 0;
+            background: rgb(236, 6, 117);
+        }
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        .letter {
+            display: none;
+            position: absolute;
+            top: 120px;
+            width: 80%;
+            height: 70%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ccc;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow-y: auto;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+        .letter h2 {
+            color: rgb(236, 6, 117);
+            font-family: 'Cursive';
+        }
+        .letter p {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart" onclick="toggleLetter()"></div>
+    <div class="letter" id="letter">
+        <h2>Para mi Querida</h2>
+        <p>Querida Ali,</p>
+        <p>Bueno… Ni se por dónde empezar y tal vez no haga falta un texto largo para expresarte eso que siento porque me encanta demostrártelo mediante mis acciones. Esto tal vez no sea mucho comparado a lo mucho que eres tú, pero es un pequeño detalle de mi parte como muestra de cariño y amor. Eres la mejor del mundo mundial y me fascinas como no tienes la más mínima idea.
+        ¿Que si me gustas?
+        Encajaste perfectamente en todo tan rápido y en mi vida has sido eso que no se busca pero sin saberlo desde siempre lo he necesitado y voy a necesitar. Inexplicablemente has hecho que mis emociones se vuelvan algo difícil de entender o describir y fácil de sentir, pero solo si estás aquí o ahí, o simplemente me fascinas como no tienes la más mínima idea. No, no me gustas solo porque te ves hermosa; me gustas porque de verdad me gusta estar contigo y disfruto estar junto a ti, no solo por amor sino porque estamos igual de locos JAJAJA.
+        Este es el inicio de muchas cosas bonitas a tu lado y quiero tener la dicha de ser parte de tus momentos felices y crear en mí para ti ese lugar seguro el cual genere en ti muchas sonrisas y solo lágrimas de felicidad 🩷
+                                           
+        Te quiero muchísimo, Dios te bendiga siempre y te mantenga junto a mí para cuidarte y darte eso que te mereces. Me esforzaré día tras día para hacerte feliz así como tú me haces feliz a mí.
+        </p>
+        <p>Con amor, Luis Carrillo o Luisito para ti.</p>
+    </div>
+    <script>
+        function toggleLetter() {
+            var letter = document.getElementById('letter');
+            if (letter.style.display === 'none' || letter.style.display === '') {
+                letter.style.display = 'block';
+            } else {
+                letter.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
